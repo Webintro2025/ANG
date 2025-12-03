@@ -2,10 +2,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React, { useState, useRef, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
 	const [mobileOpen, setMobileOpen] = useState(false)
 	const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
+	const pathname = usePathname()
 
 	return (
 		<>
@@ -49,17 +51,17 @@ export default function Navbar() {
 					<nav className="hidden md:flex md:flex-1 md:justify-center">
 						<ul className="flex gap-8 text-sm font-medium text-gray-700 items-center">
 							<li>
-								<Link href="/" className="inline-flex items-center gap-2 text-[#D2AD65] border-b-2 border-[#D2AD65] pb-2">Home</Link>
+								<Link href="/" className={`inline-flex items-center gap-2 ${pathname === '/' ? 'text-[#D2AD65]' : ''}`}>Home</Link>
+							</li>
+							<li>
+								<Link href="/about" className={`hover:text-gray-900 ${pathname === '/about' ? 'text-[#D2AD65]' : ''}`}>About us</Link>
 							</li>
 							{/* Products with hover dropdown (desktop) - JS controlled open/close with delay */}
 							<li className="relative" onMouseEnter={() => {}}>
-								<ProductsDropdown />
+								<ProductsDropdown active={pathname && pathname.startsWith('/product')} />
 							</li>
 							<li>
-								<Link href="/about" className="hover:text-gray-900">About us</Link>
-							</li>
-							<li>
-								<Link href="/contact" className="hover:text-gray-900">Contact us</Link>
+								<Link href="/contact" className={`hover:text-gray-900 ${pathname === '/contact' ? 'text-[#D2AD65]' : ''}`}>Contact us</Link>
 							</li>
 						</ul>
 					</nav>
@@ -73,11 +75,10 @@ export default function Navbar() {
 							className="inline-flex items-center gap-2 bg-[#D2AD65] hover:bg-[#D2AD65] text-white font-medium text-sm px-4 py-2 rounded-full"
 							aria-label="Contact us on WhatsApp: +91 9278927107"
 						>
-							{/* WhatsApp-like phone bubble icon (white) */}
-							<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 11-7.6-12.3 8.38 8.38 0 013.8.9L21 3v8.5z" />
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.5 12.25c-.2-.1-1.1-.55-1.3-.6-.2-.05-.35-.1-.5.1s-.6.6-.75.75c-.15.15-.3.2-.5.05-.2-.15-.8-.3-1.5-.95-.55-.5-.9-1.1-1-1.3-.1-.2 0-.3.1-.4.1-.1.25-.3.35-.45.1-.15.15-.25.25-.4.1-.15.05-.3 0-.4-.05-.1-.5-1.2-.7-1.7-.2-.45-.4-.4-.55-.4-.15 0-.35 0-.55 0s-.4.05-.6.3c-.2.25-.8.8-.8 1.9s.85 2.2.95 2.35c.1.15 1.6 2.45 3.9 3.35 2.3.9 2.3.6 2.7.55.4-.05 1.1-.45 1.25-.9.15-.45.15-.85.1-.95-.05-.1-.2-.15-.4-.25z" />
-							</svg>
+														{/* WhatsApp icon (correct orientation) */}
+														<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 32 32" fill="currentColor">
+															<path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.13 2.484 7.23L4 29l7.012-2.293A12.93 12.93 0 0016 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22.917c-2.13 0-4.21-.627-5.98-1.81l-.426-.267-4.164 1.36 1.36-4.055-.277-.418C6.627 19.21 6 17.13 6 15c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.09-7.13c-.278-.14-1.64-.81-1.893-.902-.253-.093-.437-.14-.62.14-.184.278-.713.902-.873 1.087-.16.185-.322.208-.6.07-.278-.14-1.175-.433-2.237-1.38-.827-.736-1.386-1.644-1.55-1.922-.163-.278-.017-.428.123-.567.127-.126.278-.322.417-.483.14-.16.185-.278.278-.463.093-.185.047-.347-.023-.486-.07-.139-.62-1.497-.85-2.05-.224-.54-.453-.467-.62-.476-.16-.007-.347-.009-.533-.009-.185 0-.486.07-.74.347-.253.278-.963.944-.963 2.3 0 1.356.987 2.667 1.125 2.853.139.185 1.94 2.97 4.74 4.05.663.273 1.18.436 1.584.558.665.212 1.27.182 1.747.11.533-.08 1.64-.67 1.874-1.317.233-.647.233-1.202.163-1.317-.07-.115-.255-.185-.533-.324z" />
+														</svg>
 							<span>WhatsApp</span>
 						</a>
 
@@ -160,7 +161,7 @@ export default function Navbar() {
 }
 
 
-function ProductsDropdown(){
+function ProductsDropdown({ active }){
 	const [open, setOpen] = useState(false)
 	const timeoutRef = useRef(null)
 
@@ -186,7 +187,7 @@ function ProductsDropdown(){
 
 	return (
 		<div className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-			<span className="inline-flex items-center cursor-pointer">Products</span>
+			<span className={`inline-flex items-center cursor-pointer ${active ? 'text-[#D2AD65]' : ''}`}>Products</span>
 			<div className={`absolute left-1/2 transform -translate-x-1/2 mt-3 w-[720px] lg:w-[820px] bg-white text-gray-800 rounded-xl shadow-lg ring-1 ring-black/5 transition-all duration-200 ${open ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none translate-y-1'}`}>
 						<div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
 							<Link href="/product/melamine-crockery-products" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Melamine Crockery Products</Link>
