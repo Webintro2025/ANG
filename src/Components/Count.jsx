@@ -3,15 +3,14 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const stats = [
-  { id: 1, value: '25+', label: 'Interior Design' },
-  { id: 2, value: '93+', label: 'Architecture' },
-  { id: 3, value: '48+', label: 'Construction' },
-  { id: 4, value: '68+', label: 'Projects Done' }
+  { id: 1, value: 500, label: 'Customer', suffix: '+' },
+  { id: 2, value: 450, label: 'Satisfaction Client', suffix: '+' },
+  { id: 3, value: 300, label: 'No of Product', suffix: '+' },
+  { id: 4, value: 350, label: 'Review', suffix: '+' }
 ]
 
 export default function Count(){
-  // animate all stats from 0 up to target (capped at 500 as requested)
-  const TARGET = 500
+  // animate each stat to its own target value
   const duration = 2000 // ms
 
   const [counts, setCounts] = useState(stats.map(()=>0))
@@ -23,8 +22,7 @@ export default function Count(){
       if (!start) start = timestamp
       const progress = Math.min((timestamp - start) / duration, 1)
       const next = stats.map((s, idx)=>{
-        // if original value contains a number, ignore and just animate to TARGET per user request
-        const value = Math.min(TARGET, TARGET)
+        const value = s.value;
         return Math.floor(initial + (value - initial) * progress)
       })
       setCounts(next)
@@ -55,7 +53,7 @@ export default function Count(){
             <div className="grid grid-cols-2 gap-6 text-center max-w-lg ml-auto">
               {stats.map((s, idx)=> (
                 <div key={s.id} className="py-6 border border-white/10 rounded-lg">
-                  <div className="text-3xl lg:text-4xl font-extrabold text-amber-400">{counts[idx]}{counts[idx] >= TARGET ? '+' : ''}</div>
+                  <div className="text-3xl lg:text-4xl font-extrabold text-amber-400">{counts[idx]}{s.suffix}</div>
                   <div className="mt-2 text-sm text-gray-200">{s.label}</div>
                 </div>
               ))}

@@ -27,7 +27,7 @@ export default function ProductPage({ params }) {
 				{items.map((item, index) => (
 					<div
 						key={index}
-						className="border rounded-lg p-4 shadow-sm bg-white"
+						className="border rounded-lg p-4 shadow-sm bg-white text-left"
 					>
 							{item.images && (
 								<div className="mb-3 flex justify-center">

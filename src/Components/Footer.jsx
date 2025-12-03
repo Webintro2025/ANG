@@ -9,8 +9,8 @@ export default function Footer() {
           {/* Left: Logo + address */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-white rounded flex items-center justify-center">
-               
+              <div className="w-20 h-16 bg-white  rounded flex items-center justify-center">
+               <img src="/looo.png" alt="" />
               </div>
               <div>
                 <div className="text-white font-semibold">A.N.G Enterprises</div>
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Right: Products list */}
           <div>
-            <h5 className="text-white font-semibold pl-26 mb-3">Products</h5>
+            <h5 className="text-white font-semibold    mb-3">Products</h5>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-400">
               <div className="space-y-1">
                 <a href="/product/melamine-crockery-products" className="block hover:text-white">Melamine Crockery Products</a>
