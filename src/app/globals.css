@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Site-wide amber override: replace Tailwind amber shades with brand color #D2AD65 */
+:root{
+	--site-amber: #D2AD65;
+}
+
+/* Text, background, border and ring replacements for any classes that contain "amber" */
+[class*="text-amber"]{ color: var(--site-amber) !important; }
+[class*="bg-amber"]{ background-color: var(--site-amber) !important; }
+[class*="border-amber"]{ border-color: var(--site-amber) !important; }
+[class*="ring-amber"]{ --tw-ring-color: var(--site-amber) !important; }
+
+/* Hover variants when the class name includes a hover: utility */
+[class*="hover:bg-amber"]:hover{ background-color: var(--site-amber) !important; }
+[class*="hover:text-amber"]:hover{ color: var(--site-amber) !important; }
+
+/* Fallback for inline usage like bg-amber-300 or text-amber-400 inside class lists */
+[class*="amber-300"]{ color: var(--site-amber) !important; }
+[class*="amber-400"]{ color: var(--site-amber) !important; }
+
+/* Buttons or elements that use bg-amber-... and expect readable text may need contrasting text; leave text color unchanged unless explicitly set by classes */
+
+
