@@ -26,17 +26,17 @@ export default function Navbar() {
 					</div>
 				</div>
 			</div>
-				<header className="border-b bg-white">
+				<header className="border-b bg-[#D0D0D0]">
 			<div className="max-w-7xl mx-auto px-6">
 				<div className="flex items-center justify-between h-20">
 					{/* Left: Logo */}
 					<div >
-						<Link href="/" className="inline-flex items-center gap-3">
+						<Link href="/" className="inline-flex items-center gap-9">
 							{/* Responsive logo: smaller on mobile, larger on desktop */}
 							{/* Mobile: narrower but taller; sm/md keep larger sizes */}
-							<div className="relative w-24 h-16 sm:w-44 sm:h-16 md:w-52 md:h-20">
+							<div className="relative w-16 h-10 pr-24 sm:w-28 sm:h-12 md:w-36 md:h-16">
 								<Image
-									src="/looo.png"
+									src="/loooo.jpeg"
 									alt="Kitchor"
 									fill
 									className="object-contain"
