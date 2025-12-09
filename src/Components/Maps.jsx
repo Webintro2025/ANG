@@ -6,10 +6,10 @@ const Maps = () => {
   const [userLocation, setUserLocation] = useState(null);
   const mapInstance = useRef(null);
 
-  const destinationLatLng = [28.78180130, 77.05285810];
+  const destinationLatLng = [28.78180130,77.05285810];
 
 
-  const destinationAddress = 'H-194, Sector-3, DSIIDC Bawana Industrial Area, New Delhi-110039, Delhi, India';
+  const destinationAddress = 'GROUND FLOOR, HOUSE NO H 194, DSIDC, SEC 3, VILLAGE BAWANA, North West Delhi, Delhi, 110039';
 
   useEffect(() => {
     // Load Leaflet CSS
@@ -78,7 +78,7 @@ const Maps = () => {
 
   return (
     <div className="w-full mb-1.5" style={{ minHeight: 400 }}>
-      <div className="mb-2 text-center font-semibold text-[#b07f52] text-base sm:text-lg">
+      <div className="mb-2 text-center font-semibold text-white text-base sm:text-lg">
         Destination: {destinationAddress}
       </div>
       <div

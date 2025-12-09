@@ -43,7 +43,7 @@ export default function Design() {
 										</div>
 									</div>
 									<div className="mt-8">
-										<Link href="#contact" className="inline-flex items-center bg-amber-600 text-white px-6 py-3 rounded-full shadow hover:bg-amber-700">
+										<Link href="/contact" className="inline-flex items-center bg-amber-600 text-white px-6 py-3 rounded-full shadow hover:bg-amber-700">
 											Contact Us
 										</Link>
 									</div>
@@ -87,7 +87,7 @@ export default function Design() {
 										</div>
 									</div>
 									<div className="mt-8">
-										<Link href="#contact" className="inline-flex items-center bg-amber-600 text-white px-6 py-3 rounded-full shadow hover:bg-amber-700">
+										<Link href="/contact" className="inline-flex items-center bg-amber-600 text-white px-6 py-3 rounded-full shadow hover:bg-amber-700">
 											Request a Quote
 										</Link>
 									</div>

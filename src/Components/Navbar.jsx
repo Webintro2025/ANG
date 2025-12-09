@@ -14,8 +14,8 @@ export default function Navbar() {
 			<div className="fixed top-0 left-0 right-0 z-50 shadow-[0_4px_12px_-4px_rgba(0,0,0,0.25)]">
 				{/* Top slim contact bar */}
 				<div className="bg-black border-b">
-				<div className="max-w-7xl mx-auto px-6">
-					<div className="flex items-center justify-between text-xs text-white h-8">
+				<div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+					<div className="flex flex-wrap items-center justify-between text-[10px] sm:text-xs text-white h-8">
 						<div className="flex items-center gap-6">
 							<span>📞 9278927107</span>
 							<span>✉️ ang.enterprises1989@gmail.com</span>
@@ -27,29 +27,25 @@ export default function Navbar() {
 				</div>
 			</div>
 				<header className="border-b bg-white">
-			<div className="max-w-7xl mx-auto px-6">
-				<div className="flex items-center justify-between h-20">
+			<div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+				<div className="flex items-center justify-between h-16 sm:h-20">
 					{/* Left: Logo */}
-					<div >
-						<Link href="/" className="inline-flex items-center gap-9">
-							{/* Responsive logo: smaller on mobile, larger on desktop */}
-							{/* Mobile: narrower but taller; sm/md keep larger sizes */}
-							<div className="relative w-20 h-14 pr-24 sm:w-28 sm:h-12 md:w-38 md:h-18">
+					<div>
+						<Link href="/" className="inline-flex items-center gap-4 sm:gap-9">
+							<div className="relative w-16 h-14 sm:w-20 sm:h-14 md:w-28 md:h-16 lg:w-36 lg:h-20">
 								<Image
 									src="/logoooo.jpg"
 									alt="Kitchor"
 									fill
 									className="object-contain"
 								/>
-								
 							</div>
-					
 						</Link>
 					</div>
 
 
 					<nav className="hidden md:flex md:flex-1 md:justify-center">
-						<ul className="flex gap-8 text-lg font-semibold text-gray-700 items-center justify-center w-full">
+						<ul className="flex gap-4 sm:gap-8 text-base sm:text-lg font-semibold text-gray-700 items-center justify-center w-full">
 							<li>
 								<Link href="/" className={`inline-flex items-center gap-2 ${pathname === '/' ? 'text-[#D2AD65]' : ''}`}>Home</Link>
 							</li>
@@ -67,7 +63,7 @@ export default function Navbar() {
 					</nav>
 
 
-					<div className="flex justify-end">
+					<div className="flex items-center justify-end gap-2 sm:gap-4">
 						<a
 							href="https://wa.me/919278927107"
 							target="_blank"
@@ -107,10 +103,10 @@ export default function Navbar() {
 
 			{/* Mobile menu panel (only on small screens). Desktop remains unchanged */}
 			<div className={`md:hidden fixed inset-x-0 top-28 z-40 transform transition-transform duration-200 ${mobileOpen ? 'translate-y-0 opacity-100' : '-translate-y-2/4 opacity-0 pointer-events-none'}`}>
-				<div className="bg-white shadow-lg mx-4 rounded-lg ring-1 ring-black/5 overflow-hidden">
-					<div className="px-4 py-4">
+				<div className="bg-white shadow-lg mx-2 sm:mx-4 rounded-lg ring-1 ring-black/5 overflow-hidden">
+					<div className="px-2 py-3 sm:px-4 sm:py-4">
 						<nav>
-							<ul className="flex flex-col gap-2 text-gray-800">
+							<ul className="flex flex-col gap-1 sm:gap-2 text-gray-800">
 								<li>
 									<Link href="/" onClick={() => setMobileOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50">Home</Link>
 								</li>
@@ -127,7 +123,7 @@ export default function Navbar() {
 										</svg>
 									</button>
 
-									<div className={`${mobileProductsOpen ? 'block' : 'hidden'} mt-2 pl-3 border-l border-gray-100`}> 
+									<div className={`${mobileProductsOpen ? 'block' : 'hidden'} mt-1 sm:mt-2 pl-2 sm:pl-3 border-l border-gray-100`}> 
 										<ul className="flex flex-col gap-1">
 											<li><Link href="/product/melamine-crockery-products" onClick={() => { setMobileOpen(false); setMobileProductsOpen(false) }} className="block px-3 py-2 rounded hover:bg-gray-50">Melamine Crockery Products</Link></li>
 											<li><Link href="/product/melamine-crockery" onClick={() => { setMobileOpen(false); setMobileProductsOpen(false) }} className="block px-3 py-2 rounded hover:bg-gray-50">Melamine Crockery</Link></li>
@@ -155,7 +151,7 @@ export default function Navbar() {
 			</div>
 
 			{/* spacer to offset fixed header height (top bar h-8 + header h-20 = 28) */}
-			<div className="h-28" aria-hidden="true" />
+			<div className="h-16 sm:h-28" aria-hidden="true" />
 		</>
 	)
 }

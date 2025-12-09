@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
 
             <div className="text-sm text-gray-300 space-y-1">
-              <div>📍 I-142, Sector-3, Bawana Industrial Area, DSIIDC, New Delhi-110039</div>
+              <div>📍 GROUND FLOOR, HOUSE NO H 194, DSIDC, SEC 3, VILLAGE BAWANA, North West Delhi, Delhi, 110039</div>
               <div>📞 9278927107</div>
               <div>✉️ ang.enterprises1989@gmail.com</div>
               <div>GST: 07BANPG8059B1ZO</div>
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-6 text-center">
-          <div className="text-sm text-gray-400">© {new Date().getFullYear()} S.K. Interiors. All rights reserved.</div>
+          <div className="text-sm text-gray-400">© {new Date().getFullYear()} ANG ENTERPRISES. All rights reserved.</div>
         </div>
       </div>
     </footer>

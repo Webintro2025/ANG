@@ -17,10 +17,10 @@ const GetInTouch = () => {
               </span>
               <div>
                 <div className="text-[#23286b] font-semibold text-xs sm:text-sm">
-                S.K. INTERIOR
+               ANG Enterprises Address
                 </div>
                 <div className="text-[#23286b] font-bold text-sm sm:text-base md:text-lg">
-                 H-194, Sector-3, DSIIDC Bawana Industrial Area, New Delhi-110039, Delhi, India              </div>
+                GROUND FLOOR, HOUSE NO H 194, DSIDC, SEC 3, VILLAGE BAWANA, North West Delhi, Delhi, 110039           </div>
               </div>
             </div>
             <div className="flex items-center gap-3 sm:gap-4 group">
@@ -58,7 +58,7 @@ const GetInTouch = () => {
                   Mail
                 </div>
                 <div className="text-[#23286b] font-bold text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-amber-400">
-                  <a href="mailto:apsinstruments@gmail.com" className="hover:underline hover:text-amber-400 transition-colors duration-200">ang.enterprises1989@gmail.com</a> 
+                  <a href="mailto:ang.enterprises1989@gmail.com" className="hover:underline hover:text-amber-400 transition-colors duration-200">ang.enterprises1989@gmail.com</a> 
 
                 </div>
               </div>

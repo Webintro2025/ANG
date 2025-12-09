@@ -6,31 +6,30 @@ export default function About() {
     <section className="bg-white">
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="flex flex-col md:flex-row gap-8 items-center">
-          {/* Left: Content half */}
-          <div className="w-full md:w-1/2 flex items-center">
+          {/* Desktop: left text, right image. Mobile: text then image */}
+          <div className="w-full md:w-1/2 flex items-center order-1 md:order-1">
             <div className="max-w-3xl w-full">
               <p className="text-amber-500 uppercase tracking-wider text-xs mb-3">About A.N.G Enterprises</p>
               <h2 className="text-3xl font-bold text-gray-900 leading-tight mb-6">Trusted Melamine Kitchenware Since 1989</h2>
               <p className="text-gray-700 mb-4">Established in 1989, A.N.G Enterprises is one of India’s trusted manufacturers, wholesalers, and traders of premium-quality melamine kitchenware. With over three decades of experience, we specialize in crafting durable, stylish, and user-friendly products including Lid Donga, Dinner Sets, Melamine Crockery, Bowls, Kitchen Plates, Serving Trays, Food Thalis, and a wide range of household essentials.</p>
               <p className="text-gray-700 mb-4">Guided by our founder Mr. Nitin Goyal, we have steadily grown into a reliable name in the kitchenware industry. Our products are known for their excellent finish, long life, and practical designs, making them suitable for homes, restaurants, caterers, and commercial kitchens.</p>
             </div>
-
           </div>
-          <div  className="w-[500px] h-[500px] relative">
-            <img src="/about1.avif" alt="kitchen" fill className="object-cover rounded-lg transition-transform duration-500 ease-in-out hover:scale-110"/>
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end order-2 md:order-2">
+            <div className="w-[320px] h-[220px] sm:w-[400px] sm:h-[300px] md:w-[500px] md:h-[500px] relative">
+              <Image src="/about1.avif" alt="kitchen" fill className="object-cover rounded-lg transition-transform duration-500 ease-in-out hover:scale-110" />
+            </div>
           </div>
-
         </div>
-        {/* Separate section: image left, content right */}
+        {/* Separate section: alternate order on desktop */}
         <div className="flex flex-col md:flex-row gap-8 items-center mt-16">
-          {/* Left: Image */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-            <div className="w-[500px] h-[500px] relative">
+          {/* Desktop: right text, left image. Mobile: text then image */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
+            <div className="w-[320px] h-[220px] sm:w-[400px] sm:h-[300px] md:w-[500px] md:h-[500px] relative">
               <Image src="/aboutimage.jpg" alt="kitchen" fill className="object-cover rounded-lg transition-transform duration-500 ease-in-out hover:scale-110" />
             </div>
           </div>
-          {/* Right: Content */}
-          <div className="w-full md:w-1/2 flex items-center">
+          <div className="w-full md:w-1/2 flex items-center order-1 md:order-2">
             <div className="max-w-3xl w-full">
               <div className="mb-4">
                 <strong className="block mb-2">Why Choose Us?</strong>

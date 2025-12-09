@@ -73,13 +73,7 @@ const ServicesDetails = [
         "material": "Melamine",
         "images":"Compartment Plates.png"
       },
-      {
-        "name": "Salad Bowl",
-        "price": "₹40/Piece",
-        "moq": "1000",
-        "material": "Melamine",
-        "images":"Salad Bowl1.png"
-      },
+
       {
         "name": "Serving Bowl",
         "price": "₹35/Piece",
@@ -179,27 +173,13 @@ const ServicesDetails = [
         "material": "Melamine",
         "images":"Compartment Plates.png"
       },
-      {
-        "name": "Serving Tray",
-        "price": "Not specified",
-        "moq": "1000",
-        "material": "Plastic",
-        "images":"Glass Tray.png"
-      },
-
-      {
-        "name": "Square Plate",
-        "price": "₹35/Piece",
-        "moq": "1000",
-        "material": "Melamine",
-        "images":"Square Plate.png"
-      },
+      
       {
         "name": "Melamine Crockery",
         "price": "₹200/Piece",
         "moq": "100",
         "material": "Melamine",
-        "images":"Melamine Crockery.png"
+        "images":"Kitchen Crockery.png"
       },
       {
         "name": "Soup Bowl",
@@ -209,30 +189,6 @@ const ServicesDetails = [
         "images":"Soup Bowl.png"
       },
  
-      {
-        "name": "Glass Tray",
-        "price": "Not specified",
-        "moq": "Not specified",
-        "material": "Glass",
-        "images":"Glass Tray.png"
-
-      },
-      {
-        "name": "Table Ware",
-        "price": "Not specified",
-        "moq": "Not specified",
-        "material": "Mixed",
-        "images":"Table Ware.png"
-      },
-      
-
-      {
-        "name": "Crockery Dinner Set",
-        "price": "₹500/Piece",
-        "moq": "100",
-        "material": "Melamine",
-        "images":"Crockery Dinner Set.png"
-      }
     ]
   }
 },
@@ -254,13 +210,13 @@ const ServicesDetails = [
       "name": "Melamine Mixing Bowl Set With Lids",
       "price": "₹40/Piece",
       "details": "Durable melamine mixing bowl set with lids.",
-      "images":"Melamine Mixing Bowl Set With Lids.png"
+      "images":"Melamine Lid Donga.png"
     },
     {
       "name": "Colored Melamine Bowl",
       "price": "₹10/Piece(s)",
       "details": "Colored melamine bowl with durable structure.",
-      "images":"Colored Melamine Bowl.png"
+      "images":"Melamine Bowl Set.png"
     },
     {
       "name": "Unbreakable Melamine Crockery",
@@ -274,32 +230,9 @@ const ServicesDetails = [
       "name": "Printed Melamine Crockery",
       "price": "₹200/Piece",
       "details": "High-quality printed melamine crockery.",
-      "images":"Melamine Crockery.png"
+      "images":"Crockery TableWare.png"
     },
-    {
-      "name": "Melamine Dishware",
-      "price": "₹10/Piece",
-      "details": "Durable everyday melamine dishware.",
-      "images":"Melamine Dishware.png"
-    },
-    {
-      "name": "Melamine Dinnerware",
-      "price": "₹600/Set(s)",
-      "details": "Premium melamine dinnerware set.",
-      "images":"Melamine Dinnerware.png"
-    },
-    {
-      "name": "Melamine Tableware",
-      "price": "₹200/Piece",
-      "details": "High-quality melamine tableware.",
-      "images":"Melamine Tableware.png"
-    },
-    {
-      "name": "Melamine Crockery",
-      "price": "₹200/Piece",
-      "details": "Durable and long-lasting melamine crockery.",
-      "images":"Melamine Crockery.png"
-    }
+ 
   ]
 }
 ,
@@ -326,7 +259,7 @@ const ServicesDetails = [
       "name": "Melamine Thali",
       "price": "₹20 - ₹50 Per Piece",
       "details": "Material: Melamine, Color: White, Shape: Round, Usage: Home",
-      "images":"Melamine Thali.png"
+      "images":"Melamine Dinner Plate.png"
     }
   ]
 }
@@ -347,7 +280,7 @@ const ServicesDetails = [
       "name": "Melamine Veg Bowl",
       "price": "₹5 - ₹15 Per Piece",
       "details": "Small melamine veg bowl with smooth finish and durable quality.",
-      "images":"Melamine Veg Bowl.png"
+      "images":"Food Bowl.png"
     }
   ]
 }

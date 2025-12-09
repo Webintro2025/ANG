@@ -9,7 +9,7 @@ export default function AboutPage(){
   return (
     <main>
       <section className="relative h-[360px] lg:h-[420px]">
-        <Image src="/Dinner Ware Set.png" alt="About hero" fill className="object-cover" />
+        <Image src="/5.avif" alt="About hero" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center">
           <div className="text-white">
