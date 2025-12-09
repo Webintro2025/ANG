@@ -9,8 +9,8 @@ export default function Footer() {
           {/* Left: Logo + address */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-20 h-16 bg-white  rounded flex items-center justify-center">
-               <img src="/loooo.jpeg" alt="" />
+              <div className="w-20 h-16 rounded flex items-center justify-center">
+               <img src="/logoooo.jpg" alt="" />
               </div>
               <div>
                 <div className="text-white font-semibold">A.N.G Enterprises</div>

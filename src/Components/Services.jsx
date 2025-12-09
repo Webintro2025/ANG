@@ -77,7 +77,7 @@ export default function Services() {
 			const cardWidth = container.firstChild ? container.firstChild.getBoundingClientRect().width + 24 : 0 // 24 = gap-6
 			if (!cardWidth) return
 
-			const visibleCount = 3
+			const visibleCount = 4
 			const maxIndex = Math.max(0, products.length - visibleCount)
 
 			const interval = setInterval(() => {
@@ -107,11 +107,12 @@ export default function Services() {
 					<div
 						ref={sliderRef}
 						className="flex gap-6 overflow-x-hidden pb-4 snap-x snap-mandatory scrollbar-hide"
+						style={{scrollSnapType: 'x mandatory'}}
 					>
 						{products.map((p) => (
 							<div
 								key={p.id}
-								className="min-w-[280px] sm:min-w-[300px] lg:min-w-[320px] bg-white rounded shadow-sm overflow-hidden snap-start"
+								className="min-w-[280px] sm:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-white rounded shadow-sm overflow-hidden snap-start"
 							>
 								<div className="relative w-full aspect-4/3">
 									{p.image ? (

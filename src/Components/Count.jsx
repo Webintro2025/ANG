@@ -36,8 +36,10 @@ export default function Count(){
     <section className="relative">
       {/* Background image: pick an existing image from public/ for visual */}
       <div className="absolute inset-0">
-        <Image src="/Melamine Tableware.png" alt="background" fill className="object-cover" />
-        <div className="absolute inset-0 bg-gray-900/60" />
+        <div className="w-full h-full fixed top-0 left-0 -z-10">
+          <Image src="/aaaaa.jpg" alt="background" fill className="object-cover" />
+          <div className="absolute inset-0 bg-gray-900/60" />
+        </div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 z-10">

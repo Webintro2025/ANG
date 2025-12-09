@@ -11,7 +11,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className="fixed top-0 left-0 right-0 z-50">
+			<div className="fixed top-0 left-0 right-0 z-50 shadow-[0_4px_12px_-4px_rgba(0,0,0,0.25)]">
 				{/* Top slim contact bar */}
 				<div className="bg-black border-b">
 				<div className="max-w-7xl mx-auto px-6">
@@ -26,7 +26,7 @@ export default function Navbar() {
 					</div>
 				</div>
 			</div>
-				<header className="border-b bg-[#D0D0D0]">
+				<header className="border-b bg-white">
 			<div className="max-w-7xl mx-auto px-6">
 				<div className="flex items-center justify-between h-20">
 					{/* Left: Logo */}
@@ -34,9 +34,9 @@ export default function Navbar() {
 						<Link href="/" className="inline-flex items-center gap-9">
 							{/* Responsive logo: smaller on mobile, larger on desktop */}
 							{/* Mobile: narrower but taller; sm/md keep larger sizes */}
-							<div className="relative w-16 h-10 pr-24 sm:w-28 sm:h-12 md:w-36 md:h-16">
+							<div className="relative w-20 h-14 pr-24 sm:w-28 sm:h-12 md:w-38 md:h-18">
 								<Image
-									src="/loooo.jpeg"
+									src="/logoooo.jpg"
 									alt="Kitchor"
 									fill
 									className="object-contain"
@@ -49,7 +49,7 @@ export default function Navbar() {
 
 
 					<nav className="hidden md:flex md:flex-1 md:justify-center">
-						<ul className="flex gap-8 text-sm font-medium text-gray-700 items-center">
+						<ul className="flex gap-8 text-lg font-semibold text-gray-700 items-center justify-center w-full">
 							<li>
 								<Link href="/" className={`inline-flex items-center gap-2 ${pathname === '/' ? 'text-[#D2AD65]' : ''}`}>Home</Link>
 							</li>
@@ -67,7 +67,7 @@ export default function Navbar() {
 					</nav>
 
 
-					<div className="flex items-center gap-4 flex-1 justify-end">
+					<div className="flex justify-end">
 						<a
 							href="https://wa.me/919278927107"
 							target="_blank"
@@ -188,18 +188,18 @@ function ProductsDropdown({ active }){
 	return (
 		<div className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
 			<span className={`inline-flex items-center cursor-pointer ${active ? 'text-[#D2AD65]' : ''}`}>Products</span>
-			<div className={`absolute left-1/2 transform -translate-x-1/2 mt-3 w-[720px] lg:w-[820px] bg-white text-gray-800 rounded-xl shadow-lg ring-1 ring-black/5 transition-all duration-200 ${open ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none translate-y-1'}`}>
-						<div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-							<Link href="/product/melamine-crockery-products" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Melamine Crockery Products</Link>
-							<Link href="/product/melamine-crockery" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Melamine Crockery</Link>
-							<Link href="/product/kitchen-full-plates" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Kitchen Full Plates</Link>
-							<Link href="/product/melamine-thali" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Melamine Thali</Link>
-							<Link href="/product/melamine-bowls" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Melamine Bowls</Link>
-							<Link href="/product/veg-bowl" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Veg Bowl</Link>
-							<Link href="/product/dinner-sets" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Dinner Sets</Link>
-							<Link href="/product/lid-donga" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Lid Donga</Link>
-							<Link href="/product/serving-spoon" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Serving Spoon</Link>
-							<Link href="/product/serving-tray" onClick={() => setOpen(false)} className="block px-3 py-2 rounded hover:bg-gray-50 transition-colors duration-150">Serving Tray</Link>
+			<div className={`absolute left-1/2 transform -translate-x-1/2 mt-3 w-[320px] max-h-[320px] overflow-y-auto bg-white text-gray-800 rounded-xl shadow-lg ring-1 ring-black/5 transition-all duration-200 ${open ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none translate-y-1'}`}>
+						<div className="p-2 flex flex-col gap-1">
+							<Link href="/product/melamine-crockery-products" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Melamine Crockery Products</Link>
+							<Link href="/product/melamine-crockery" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Melamine Crockery</Link>
+							<Link href="/product/kitchen-full-plates" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Kitchen Full Plates</Link>
+							<Link href="/product/melamine-thali" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Melamine Thali</Link>
+							<Link href="/product/melamine-bowls" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Melamine Bowls</Link>
+							<Link href="/product/veg-bowl" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Veg Bowl</Link>
+							<Link href="/product/dinner-sets" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Dinner Sets</Link>
+							<Link href="/product/lid-donga" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Lid Donga</Link>
+							<Link href="/product/serving-spoon" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Serving Spoon</Link>
+							<Link href="/product/serving-tray" onClick={() => setOpen(false)} className="block px-3 py-2 rounded text-sm font-normal hover:bg-gray-50 transition-colors duration-150">Serving Tray</Link>
 						</div>
 			</div>
 		</div>

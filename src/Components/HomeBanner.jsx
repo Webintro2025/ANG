@@ -2,11 +2,9 @@
 import React, { useEffect, useState } from 'react';
 
 const slides = [
-  'b.jpg',
-
-  'banner1.jpg',
-  'banner2.jpg',
-  'banner3.jpg',
+"/bannner3.jpg",
+"/bannner1.jpg",
+"/bannner2.jpg",
 
   
 ];

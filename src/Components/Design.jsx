@@ -11,20 +11,11 @@ export default function Design() {
 				<div className="grid lg:grid-cols-2 gap-10 items-center">
 					<div className="relative">
 						<div className="w-full rounded-lg overflow-hidden shadow-lg">
-							<Image src="/Melamine Mixing Bowl Set With Lids.png" alt="kitchen" width={900} height={600} className="w-full h-auto object-cover" />
+							<Image src="/why.jpg" alt="kitchen" width={900} height={600} className="w-full h-auto object-cover" />
 						</div>
 
 						{/* Circular badge */}
-						<div className="absolute left-12 top-1/2 transform -translate-y-1/2">
-							<div className="relative flex items-center justify-center w-40 h-40 rounded-full bg-amber-500 text-white shadow-2xl">
-								<div className="text-4xl font-extrabold">25</div>
-								<div className="absolute bottom-4 text-xs text-white/90 text-center w-full">Years<br/>Guarantee</div>
-								{/* dashed white ring */}
-								<svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2" strokeDasharray="3 3" />
-								</svg>
-							</div>
-						</div>
+
 					</div>
 
 								<div>
@@ -104,7 +95,7 @@ export default function Design() {
 
 					<div>
 						<div className="w-full rounded-lg overflow-hidden shadow-lg">
-							<Image src="/Melamine Dinner Set.png" alt="kitchen interior" width={900} height={600} className="w-full h-auto object-cover" />
+							<Image src="/unique.jpeg" alt="kitchen interior" width={900} height={600} className="w-full h-auto object-cover" />
 						</div>
 					</div>
 				</div>

@@ -6,51 +6,12 @@ import Link from 'next/link'
 export default function Gallery(){
 	// Slides mapped to services in `Services.jsx` (Smart care, Kitchen Planner, Home check, Kitchen Design)
 	const slides = [
-		"/Cake Server.png",
-		"/Colored Melamine Bowl.png",
-		"/Compartment Plates.png",
-		"/Crockery Dinner Set.png",
-		"/Crockery TableWare.png",
-		"/Dinner Bowl.png",
-		"/Dinner Plate Set.png",
-		"/Dinner Ware Set.png",
-		"/elamine Dinner Plates.png",
-		"/Food Bowl.png",
-		"/Glass Tray.png",
-		"/Kitchen Crockery.png",
-		"/Leaf Plates.png",
-		"/Melamine Bowl (2).png",
-		"/Melamine Bowl Set.png",
-		"/Melamine Bowl.png",
-		"/Melamine Crockery.png",
-		"/Melamine Dinner Plate.png",
-		"/Melamine Dinner Set.png",
-		"/Melamine Dinnerware.png",
-		"/Melamine Dishes.png",
-		"/Melamine Dishware.png",
-		"/Melamine Kitchen Full Plate.png",
-		"/Melamine Kitchen Half Plate.png",
-		"/Melamine Lid Donga.png",
-		"/Melamine Mixing Bowl Set With Lids.png",
-		"/Melamine Plate.png",
-		"/Melamine Serving Spoon.png",
-		"/Melamine Serving Tray.png",
-		"/Melamine Serving Tray1.png",
-		"/Melamine Tableware.png",
-		"/Melamine Thali.png",
-		"/Melamine Utensils.png",
-		"/Melamine Veg Bowl.png",
-		"/Oval Plates.png",
-		"/Oval Platter.png",
-		"/Salad Bowl.png",
-		"/Salad Bowl1.png",
-		"/Serving Bowl.png",
-		"/Soup Bowl.png",
-		"/Square Bowl.png",
-		"/Square Dinner Set.png",
-		"/Square Plate.png",
-		"/Table Ware.png",
-		"/Unbreakable Melamine Crockery.png",
+		"/1.avif",
+		"/2.avif",
+		"/3.avif",
+		"/4.avif",
+		"/5.avif",
+		"/6.avif",
 	]
 
 	const [index, setIndex] = useState(0)
@@ -68,13 +29,8 @@ export default function Gallery(){
 
 	return (
 		<section className="relative bg-gray-900 text-white">
-			{/* Background image that follows the active slide (low-opacity overlay for contrast) */}
-			<div className="absolute inset-0 z-0">
-				{slides.length > 0 && (
-					<Image src={slides[index]} alt="background" fill className="object-cover opacity-30" />
-				)}
-				<div className="absolute inset-0 bg-gray-900/10" />
-			</div>
+			{/* Fixed background image */}
+		
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative z-10">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 					{/* Left promo text */}
@@ -95,7 +51,7 @@ export default function Gallery(){
 
 					{/* Right slideshow card - responsive */}
 					<div className="relative flex justify-center lg:justify-end">
-						<div className="w-full max-w-[400px] sm:max-w-[500px] rounded shadow-lg overflow-hidden bg-gray-800">
+						<div className="w-full max-w-[400px] sm:max-w-[500px] rounded shadow-lg overflow-hidden bg-gray-900">
 							{/* Responsive image area */}
 							<div className="relative w-full h-[260px] sm:h-[350px] md:h-[400px] lg:h-[500px] mx-auto">
 								{slides.map((src, i) => (

@@ -7,7 +7,7 @@ const GetInTouch = () => {
       <div className="flex flex-col lg:flex-row gap-8 sm:gap-10">
         {/* Contact Info Section */}
         <div className="lg:w-1/2 flex flex-col justify-center">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-[#23286b] mb-5 sm:mb-8 text-left">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white mb-5 sm:mb-8 text-left">
             Contact Information
           </h2>
           <div className="bg-white border-l-4 sm:border-l-8 border-amber-500 shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 max-w-xl mx-auto flex flex-col gap-4 sm:gap-7 animate-fadein">
@@ -72,7 +72,7 @@ const GetInTouch = () => {
 
         {/* Get In Touch Section */}
         <div className="lg:w-1/2">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-gray-900 mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white mb-4 sm:mb-6">
             Get In Touch
           </h2>
           <div className="bg-gray-50 p-4 sm:p-8 border mt-16 border-gray-100 max-w-lg">
