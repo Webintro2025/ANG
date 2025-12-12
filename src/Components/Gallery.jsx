@@ -12,6 +12,11 @@ export default function Gallery(){
 		"/4.avif",
 		"/5.avif",
 		"/6.avif",
+		'/g1.jpg',
+		'/g2.jpg',
+		'/g3.jpg',
+		'/g4.jpg',
+		'/g5.avif',
 	]
 
 	const [index, setIndex] = useState(0)
@@ -36,7 +41,7 @@ export default function Gallery(){
 					{/* Left promo text */}
 					<div className="pr-0 md:pr-4 lg:pr-8 mb-6 md:mb-8 lg:mb-0">
 						
-						<h2 className="mt-4 text-lg sm:text-xl md:text-2xl lg:text-4xl font-extrabold">Our Melamine Kitchenware Gallery</h2>
+						<h2 className="mt-4 text-lg sm:text-xl md:text-2xl lg:text-4xl font-extrabold">Explore	 Our Melamine Kitchenware Gallery</h2>
 						<p className="mt-4 text-gray-300 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg text-sm md:text-base">Explore our premium range of melamine crockery, dinner sets, bowls, thalis, and more. Every product is crafted for durability, style, and everyday comfort. Browse the gallery to see our latest designs and bestsellers.</p>
 						<p className="mt-2 text-gray-300 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg text-sm md:text-base">From elegant dinner sets to practical serving trays, our collection is designed to meet the needs of modern homes, restaurants, and catering businesses. We pride ourselves on quality, innovation, and customer satisfaction.</p>
 						<p className="mt-2 text-gray-300 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg text-sm md:text-base">Discover why thousands of families and professionals trust A.N.G Enterprises for their kitchenware needs. Our products are ISO-certified, available in a wide range of colors and styles, and backed by dedicated support.</p>

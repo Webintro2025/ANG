@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,9 +11,48 @@ export default function Design() {
 				{/* Top: Designed by desires */}
 				<div className="grid lg:grid-cols-2 gap-10 items-center">
 					<div className="relative">
-						<div className="w-full rounded-lg overflow-hidden shadow-lg">
-							<Image src="/why.jpg" alt="kitchen" width={900} height={600} className="w-full h-auto object-cover" />
-						</div>
+										{/* Image Slider Start */}
+										<div className="w-full  rounded-lg overflow-hidden shadow-lg relative">
+												{/* Slider logic */}
+												{(() => {
+													const images = [
+														'/why.jpg',
+														'/w3.avif',
+														'/w4.jpg',
+														'/w2.avif',
+														'/w5.jpg',
+													];
+													const [current, setCurrent] = React.useState(0);
+													const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
+													const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
+													React.useEffect(() => {
+														const interval = setInterval(() => {
+															setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
+														}, 3500); // 3.5 seconds
+														return () => clearInterval(interval);
+													}, [images.length]);
+													return (
+														<>
+															<Image src={images[current]} alt="kitchen" width={900} height={800} className="w-full h-[728px] object-cover transition-all duration-500" />
+															{/* Left Button */}
+															<button onClick={prev} aria-label="Previous" className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow text-black">
+																&#8592;
+															</button>
+															{/* Right Button */}
+															<button onClick={next} aria-label="Next" className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow text-black">
+																&#8594;
+															</button>
+															{/* Dots */}
+															<div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+																{images.map((_, i) => (
+																	<span key={i} className={`w-2 h-2 rounded-full ${i === current ? 'bg-amber-600' : 'bg-gray-300'} inline-block`}></span>
+																))}
+															</div>
+														</>
+													);
+												})()}
+										</div>
+										{/* Image Slider End */}
 
 						{/* Circular badge */}
 
@@ -94,9 +134,45 @@ export default function Design() {
 								</div>
 
 					<div>
-						<div className="w-full rounded-lg overflow-hidden shadow-lg">
-							<Image src="/unique.jpeg" alt="kitchen interior" width={900} height={600} className="w-full h-auto object-cover" />
-						</div>
+																<div className="w-full  rounded-lg overflow-hidden shadow-lg relative">
+												{/* Slider logic */}
+												{(() => {
+													const images = [
+														'/unique.jpeg',
+														'/u2.png',
+														'/u3.png',
+														'/u4.png',
+													];
+													const [current, setCurrent] = React.useState(0);
+													const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
+													const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
+													React.useEffect(() => {
+														const interval = setInterval(() => {
+															setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
+														}, 3500); // 3.5 seconds
+														return () => clearInterval(interval);
+													}, [images.length]);
+													return (
+														<>
+															<Image src={images[current]} alt="kitchen" width={900} height={800} className="w-full h-[728px] object-cover transition-all duration-500" />
+															{/* Left Button */}
+															<button onClick={prev} aria-label="Previous" className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow text-black">
+																&#8592;
+															</button>
+															{/* Right Button */}
+															<button onClick={next} aria-label="Next" className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow text-black">
+																&#8594;
+															</button>
+															{/* Dots */}
+															<div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+																{images.map((_, i) => (
+																	<span key={i} className={`w-2 h-2 rounded-full ${i === current ? 'bg-amber-600' : 'bg-gray-300'} inline-block`}></span>
+																))}
+															</div>
+														</>
+													);
+												})()}
+										</div>
 					</div>
 				</div>
 
