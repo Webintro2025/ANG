@@ -9,7 +9,7 @@ export default function About() {
           {/* Desktop: left text, right image. Mobile: text then image */}
           <div className="w-full md:w-1/2 flex items-center order-1 md:order-1">
             <div className="max-w-3xl w-full">
-              <p className="text-amber-500 uppercase tracking-wider text-xs mb-3">About A.N.G Enterprises</p>
+              
               <h2 className="text-3xl font-bold text-gray-900 leading-tight mb-6">Trusted Melamine Kitchenware Since 1989</h2>
               <p className="text-gray-700 mb-4">Established in 1989, A.N.G Enterprises is one of India’s trusted manufacturers, wholesalers, and traders of premium-quality melamine kitchenware. With over three decades of experience, we specialize in crafting durable, stylish, and user-friendly products including Lid Donga, Dinner Sets, Melamine Crockery, Bowls, Kitchen Plates, Serving Trays, Food Thalis, and a wide range of household essentials.</p>
               <p className="text-gray-700 mb-4">Guided by our founder Mr. Nitin Goyal, we have steadily grown into a reliable name in the kitchenware industry. Our products are known for their excellent finish, long life, and practical designs, making them suitable for homes, restaurants, caterers, and commercial kitchens.</p>

@@ -35,7 +35,7 @@ export default function Gallery(){
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
 					{/* Left promo text */}
 					<div className="pr-0 md:pr-4 lg:pr-8 mb-6 md:mb-8 lg:mb-0">
-						<p className="text-amber-500 text-sm font-medium uppercase tracking-wide">ANG Enterprises </p>
+						
 						<h2 className="mt-4 text-lg sm:text-xl md:text-2xl lg:text-4xl font-extrabold">Our Melamine Kitchenware Gallery</h2>
 						<p className="mt-4 text-gray-300 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg text-sm md:text-base">Explore our premium range of melamine crockery, dinner sets, bowls, thalis, and more. Every product is crafted for durability, style, and everyday comfort. Browse the gallery to see our latest designs and bestsellers.</p>
 						<p className="mt-2 text-gray-300 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg text-sm md:text-base">From elegant dinner sets to practical serving trays, our collection is designed to meet the needs of modern homes, restaurants, and catering businesses. We pride ourselves on quality, innovation, and customer satisfaction.</p>

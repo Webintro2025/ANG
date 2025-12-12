@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const slides = [
 "/bannner3.jpg",
 "/bannner1.jpg",
-"/bannner2.jpg",
+"/bannerr.jpg"
 
   
 ];
