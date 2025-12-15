@@ -4,9 +4,8 @@ import { usePathname } from "next/navigation";
 import ContactForm from "./ContactForm";
 
 const GetInTouch = () => {
-  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
-  // If using next/navigation in app directory:
-  // const pathname = usePathname();
+  // Use Next.js usePathname for correct routing in app directory
+  const pathname = usePathname();
   const headingColor = pathname === "/" ? "#FFFFFF" : "#23286B";
   return (
     <section className="max-w-7xl mx-auto px-2 sm:px-4 py-8 sm:py-10">

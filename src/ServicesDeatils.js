@@ -114,7 +114,7 @@ const ServicesDetails = [
         "price": "₹2000/Piece",
         "moq": "1000",
         "material": "Melamine",
-        "images":"Kitchen Crockery.png"
+        "images":"kk.png"
       },
       {
         "name": "Leaf Plates",
@@ -203,7 +203,7 @@ const ServicesDetails = [
       "name": "Colored Melamine Bowl",
       "price": "₹10/Piece(s)",
       "details": "Colored melamine bowl with durable structure.",
-      "images":"Melamine Bowl Set.png"
+      "images":"bbb.png"
     },
     {
       "name": "Unbreakable Melamine Crockery",
@@ -257,7 +257,7 @@ const ServicesDetails = [
       "name": "Melamine Bowl Set",
       "price": "₹50/Set(s)",
       "details": "Material: Melamine, Color: Different, Shape: Round, Usage: Home",
-      "images":"Melamine Bowl Set.png"
+      "images":"bbb.png"
     }
   ]
 },
