@@ -83,7 +83,7 @@ const HomeBanner = () => {
   };
 
   return (
-    <div className={`relative w-full h-[15vh] sm:h-[20vh] md:h-[30vh] lg:h-[38vh] xl:h-[53vh] 2xl:h-[70vh] bg-gradient-to-r from-[#D2AD65]/30 via-white to-[#D2AD65]/60 shadow-2xl ${isMobile ? 'pt-8' : ''}`}>
+    <div className={`relative w-full h-[15vh] sm:h-[30vh] md:h-[40vh] lg:h-[50vh] xl:h-[62vh] 2xl:h-[70vh] bg-gradient-to-r from-[#D2AD65]/30 via-white to-[#D2AD65]/60 shadow-2xl ${isMobile ? 'pt-8' : ''}`}>
       <div className="relative w-full h-full">
         <img
           src={banners[currentIndex].src}
