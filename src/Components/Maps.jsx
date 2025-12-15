@@ -88,6 +88,7 @@ const Maps = () => {
           height: 400,
           borderRadius: 12,
           overflow: 'hidden',
+          zIndex: 1 // Lower z-index
         }}
       />
       <div className="text-center mt-4">

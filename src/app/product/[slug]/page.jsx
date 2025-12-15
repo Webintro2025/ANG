@@ -18,6 +18,7 @@ export default async function ProductPage({ params }) {
 	const items = Array.isArray(data) ? data : data.products || [];
 
 	return (
+		<>
 		<div className="max-w-5xl mx-auto py-10">
 			<h1 className="px-2 sm:px-4 md:px-8 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
 				{slug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())}
@@ -67,15 +68,17 @@ export default async function ProductPage({ params }) {
 					</div>
 				))}
 			</div>
-
-			<div className="mt-12">
+			</div>
+<hr />			
 				<GetInTouch />
-			</div>
-
-			<div className="mt-8">
+			
+<hr />
+			
 				<Maps />
-			</div>
-		</div>
+
+				<hr />
+			
+	</>	
 	);
 }
 

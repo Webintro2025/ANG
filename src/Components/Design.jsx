@@ -20,7 +20,7 @@ export default function Design() {
 														'/w3.avif',
 														'/w4.jpg',
 														'/w2.avif',
-														'/w5.jpg',
+													
 													];
 													const [current, setCurrent] = React.useState(0);
 													const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
@@ -33,7 +33,7 @@ export default function Design() {
 													}, [images.length]);
 													return (
 														<>
-															<Image src={images[current]} alt="kitchen" width={900} height={800} className="w-full h-[728px] object-cover transition-all duration-500" />
+															<Image src={images[current]} alt="kitchen" width={900} height={700} className="w-full h-[680px] object-cover transition-all duration-500" />
 															{/* Left Button */}
 															<button onClick={prev} aria-label="Previous" className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow text-black">
 																&#8592;
@@ -76,7 +76,10 @@ export default function Design() {
 											<h4 className="font-semibold">Safe & Reliable Production</h4>
 											<p className="text-sm text-gray-600">Our advanced manufacturing facility and highly technical machines allow us to produce kitchenware in multiple designs, sizes, and finishes while maintaining strict quality standards.</p>
 										</div>
-
+<div>
+											<h4 className="font-semibold">Eco-Friendly Practices</h4>
+											<p className="text-sm text-gray-600">We are committed to sustainable manufacturing by minimizing waste, recycling materials, and using environmentally friendly processes wherever possible.</p>
+</div>
 										<div>
 											<h4 className="font-semibold">Pan-India Supply</h4>
 											<p className="text-sm text-gray-600">With a strong storage and distribution system, we ensure timely and damage-free delivery across India.</p>
@@ -133,7 +136,7 @@ export default function Design() {
 									</div>
 								</div>
 
-					<div>
+				
 																<div className="w-full  rounded-lg overflow-hidden shadow-lg relative">
 												{/* Slider logic */}
 												{(() => {
@@ -154,7 +157,7 @@ export default function Design() {
 													}, [images.length]);
 													return (
 														<>
-															<Image src={images[current]} alt="kitchen" width={900} height={800} className="w-full h-[728px] object-cover transition-all duration-500" />
+															<Image src={images[current]} alt="kitchen" width={900} height={700} className="w-full h-[680px] object-cover transition-all duration-500" />
 															{/* Left Button */}
 															<button onClick={prev} aria-label="Previous" className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow text-black">
 																&#8592;
@@ -172,7 +175,7 @@ export default function Design() {
 														</>
 													);
 												})()}
-										</div>
+										
 					</div>
 				</div>
 

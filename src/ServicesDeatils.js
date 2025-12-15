@@ -151,14 +151,7 @@ const ServicesDetails = [
         "material": "Melamine",
         "images":"Crockery TableWare.png"
       },
-      {
-        "name": "Kitchen Crockery",
-        "price": "₹2000/Piece",
-        "moq": "1000",
-        "material": "Melamine",
-        "images":"Kitchen Crockery.png"
-
-      },
+     
       {
         "name": "Melamine Serving Tray",
         "price": "₹17–₹57",
@@ -174,13 +167,7 @@ const ServicesDetails = [
         "images":"Compartment Plates.png"
       },
       
-      {
-        "name": "Melamine Crockery",
-        "price": "₹200/Piece",
-        "moq": "100",
-        "material": "Melamine",
-        "images":"Kitchen Crockery.png"
-      },
+   
       {
         "name": "Soup Bowl",
         "price": "₹20/Piece",

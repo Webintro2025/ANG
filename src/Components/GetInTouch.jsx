@@ -1,16 +1,22 @@
+"use client"
 import React from "react";
+import { usePathname } from "next/navigation";
 import ContactForm from "./ContactForm";
 
 const GetInTouch = () => {
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+  // If using next/navigation in app directory:
+  // const pathname = usePathname();
+  const headingColor = pathname === "/" ? "#FFFFFF" : "#23286B";
   return (
     <section className="max-w-7xl mx-auto px-2 sm:px-4 py-8 sm:py-10">
       <div className="flex flex-col lg:flex-row gap-8 sm:gap-10">
         {/* Contact Info Section */}
         <div className="lg:w-1/2 flex flex-col justify-center">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white mb-5 sm:mb-8 text-left">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold mb-5 sm:mb-6 text-left" style={{ color: headingColor }}>
             Contact Information
           </h2>
-          <div className="bg-white border-l-4 sm:border-l-8 border-amber-500 shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 max-w-xl mx-auto flex flex-col gap-4 sm:gap-7 animate-fadein">
+          <div className="bg-white py-2 border-l-4 sm:border-l-8 border-amber-500 shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 max-w-xl mx-auto flex flex-col gap-4 sm:gap-7 animate-fadein">
             <div className="flex items-center gap-3 sm:gap-4 group">
               <span className="bg-[#23286b] text-amber-300 rounded-full p-2 sm:p-3 text-base sm:text-xl transition-transform duration-300 group-hover:scale-110 animate-bounce">
                 <i className="fas fa-building"></i>
@@ -72,17 +78,17 @@ const GetInTouch = () => {
 
         {/* Get In Touch Section */}
         <div className="lg:w-1/2">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold mb-4 sm:mb-6" style={{ color: headingColor }}>
             Get In Touch
           </h2>
-          <div className="bg-gray-50 p-4 sm:p-8 border mt-16 border-gray-100 max-w-lg">
+          <div className="bg-white border-l-4 sm:border-l-8 border-amber-500 shadow-xl rounded-2xl py-4 px-4   max-w-xl mx-auto flex flex-col gap-4 sm:gap-7 animate-fadein">
             <ContactForm />
           </div>
         </div>
       </div>
 
       {/* Bottom Banner */}
-          <section className="bg-linear-to-r from-[#0f3a66] via-[#0a2a4a] to-[#0f3a66] py-4 sm:py-6 px-2 sm:px-6 mt-8 sm:mt-12">
+          <section className="bg-linear-to-r from-[#0f3a66] via-[#0a2a4a] to-[#0f3a66] py-4 rounded-3xl sm:py-6 px-2 sm:px-6 mt-8 sm:mt-12">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-white text-sm sm:text-lg font-light max-w-xl text-center sm:text-left">
             If You Need Any Industrial Solution{" "}
