@@ -42,12 +42,12 @@ const mobileBanners = [
 
 
 const HomeBanner = () => {
-  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 640 : false);
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 425 : false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const checkScreen = () => {
-      setIsMobile(window.innerWidth < 640);
+      setIsMobile(window.innerWidth < 425);
     };
     checkScreen();
     window.addEventListener('resize', checkScreen);
