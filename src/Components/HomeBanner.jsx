@@ -3,21 +3,33 @@ import React, { useState, useEffect } from 'react';
 
 // Desktop images (d1, d2)
 const desktopBanners = [
+  // {
+  //   id: 1,
+  //   src: "/d1.jpg", // Replace with your actual desktop image path
+  //   alt: "Desktop Banner 1"
+  // },
+  // {
+  //   id: 2,
+  //   src: "/d2.jpg", // Replace with your actual desktop image path
+  //   alt: "Desktop Banner 2"
+  // },
+
+  // {
+  //   id: 3,
+  //   src: "/d3.jpg", // Replace with your actual desktop image path
+  //   alt: "Desktop Banner 3"
+  // }
   {
     id: 1,
-    src: "/d1.jpg", // Replace with your actual desktop image path
-    alt: "Desktop Banner 1"
-  },
-  {
+    src: "nl1.jpg", // Replace with your actual desktop image path
+  }
+  ,{
     id: 2,
-    src: "/d2.jpg", // Replace with your actual desktop image path
-    alt: "Desktop Banner 2"
-  },
-
-  {
+    src: "nl2.jpg", // Replace with your actual desktop image path
+  }
+  ,{  
     id: 3,
-    src: "/d3.jpg", // Replace with your actual desktop image path
-    alt: "Desktop Banner 3"
+    src: "nl.jpg", // Replace with your actual desktop image path
   }
 ];
 
@@ -70,17 +82,7 @@ const HomeBanner = () => {
   }, [isMobile]);
 
   const banners = isMobile ? mobileBanners : desktopBanners;
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === banners.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? banners.length - 1 : prevIndex - 1
-    );
-  };
+ 
 
   return (
     <div className={`relative w-full h-[15vh] sm:h-[30vh] md:h-[40vh] lg:h-[50vh] xl:h-[63vh] 2xl:h-[70vh] bg-gradient-to-r from-[#D2AD65]/30 via-white to-[#D2AD65]/60 shadow-2xl ${isMobile ? 'pt-8' : ''}`}>
